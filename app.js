@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 // import date from './date.js';
 import mongoose from 'mongoose';
 import _ from "lodash";
+const port = process.env.PORT || 3000;
 const schema = mongoose.Schema;
 
 
@@ -151,6 +152,6 @@ app.get('/about', (req, res) => {
   res.render('about');
 })
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-})
+app.get("/", (req, res) => res.type('html').send(html));
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
