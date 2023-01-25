@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 import _ from "lodash";
 const port = process.env.PORT || 3000;
 const schema = mongoose.Schema;
-
+mongoose.set('strictQuery', false);
 
 
 // const day = date.getDay();
